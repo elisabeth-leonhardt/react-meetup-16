@@ -30,30 +30,14 @@ const pages = [
     id: 4,
   },
   {
-    linktext: "Placeholder data and initial data",
-    link: "/placeholderAndInitialData",
-    id: 5,
-  },
-  // I couldn't make this work yet
-  // {
-  //   linktext: "Query prefetching",
-  //   link: "/prefetchQuery",
-  //   id: 6,
-  // },
-  {
     linktext: "Mutation with refetch",
     link: "/mutationWithRefetch",
-    id: 7,
+    id: 5,
   },
   {
     linktext: "Mutation with manual cache update (without refetch)",
     link: "/mutationWithoutRefetch",
-    id: 8,
-  },
-  {
-    linktext: "Mutation with optimistic update",
-    link: "/mutationWithOptimisticUpdate",
-    id: 9,
+    id: 6,
   },
 ];
 

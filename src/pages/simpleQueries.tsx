@@ -1,10 +1,10 @@
 import Character from "@/components/Character";
-import { Home } from "@/components/Icons";
+import { PageWrapper } from "@/components/PageWrapper";
+import { Title } from "@/components/Title";
 import { delay } from "@/lib/delay";
 import { RickAndMortyCharacterResponse } from "@/models/APITypes";
 import { useQuery } from "@tanstack/react-query";
 import axios, { AxiosResponse } from "axios";
-import Link from "next/link";
 import React from "react";
 
 function Simplequeries() {
@@ -57,14 +57,8 @@ function Simplequeries() {
   });
 
   return (
-    <div className="min-h-screen max-w-5xl m-[auto] py-10 px-4">
-      <Link href="/">
-        <Home fill="#fff"></Home>
-      </Link>
-      <h1 className="text-4xl font-extrabold tanstack-query-gradient py-2 pb-4">
-        Simple Queries
-      </h1>
-
+    <PageWrapper>
+      <Title title="Simple Query"></Title>
       {throwAnError.isError ? (
         <p className="text-orange-600 pb-4">Ouch! An error ocurred</p>
       ) : null}
@@ -83,7 +77,7 @@ function Simplequeries() {
           ))}
         </div>
       ) : null}
-    </div>
+    </PageWrapper>
   );
 }
 
