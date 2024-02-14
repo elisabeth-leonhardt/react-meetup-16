@@ -6,12 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "json-server": "json-server --watch db.json -p 8001"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.17.10",
     "@tanstack/react-query-devtools": "^5.17.10",
     "axios": "^1.6.5",
+    "json-server": "^1.0.0-alpha.23",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18"
