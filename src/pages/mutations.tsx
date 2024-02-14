@@ -9,7 +9,7 @@ import { PageWrapper } from "@/components/PageWrapper";
 import { Title } from "@/components/Title";
 
 async function updateTodo(todo: CompleteTodoI) {
-  const res =  await fetch(`http://localhost:8001/todos/${todo.id}`, {
+  const res = await fetch(`http://localhost:8001/todos/${todo.id}`, {
     method: "PUT",
     headers: {
       "content-type": "application/json",
@@ -116,7 +116,7 @@ function Mutation() {
   const todos = useQuery({ queryKey: ["todos"], queryFn: fetchTodos });
   return (
     <PageWrapper>
-      <Title title="Mutation with Refetch"></Title>
+      <Title title="Mutation with and without Refetch"></Title>
       <form onSubmit={onFormSubmit} className="grid grid-cols-1 gap-4">
         <div className="flex gap-4 items-end">
           <label htmlFor="user" className="text-xl font-bold">

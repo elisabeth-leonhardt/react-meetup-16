@@ -30,14 +30,9 @@ const pages = [
     id: 4,
   },
   {
-    linktext: "Mutation with refetch",
-    link: "/mutationWithRefetch",
+    linktext: "Mutations with and without refetch",
+    link: "/mutations",
     id: 5,
-  },
-  {
-    linktext: "Mutation with manual cache update (without refetch)",
-    link: "/mutationWithoutRefetch",
-    id: 6,
   },
 ];
 
