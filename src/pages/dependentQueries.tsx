@@ -26,7 +26,10 @@ async function getMorties() {
 }
 
 function Dependentqueries() {
-  const ricks = useQuery({ queryKey: ["ricks"], queryFn: getRicks });
+  const ricks = useQuery({
+    queryKey: ["ricks"],
+    queryFn: getRicks,
+  });
   let ricksPresent: boolean = !!ricks.data && !ricks.isPlaceholderData;
   const morties = useQuery({
     queryKey: ["morties"],

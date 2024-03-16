@@ -6,11 +6,7 @@ import { FilterInterface, FilterQueryKey } from "@/models/FilterInterface";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 
-function getRicksAndMorties({
-  queryKey,
-}: {
-  queryKey: FilterQueryKey;
-}) {
+function getRicksAndMorties({ queryKey }: { queryKey: FilterQueryKey }) {
   const [, filter] = queryKey;
   return fetch(
     `https://rickandmortyapi.com/api/character?name=${filter.name}&status=${filter.status}&gender=${filter.gender}&species=${filter.species}&type=${filter.type}`

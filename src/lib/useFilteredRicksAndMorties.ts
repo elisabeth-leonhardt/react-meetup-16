@@ -9,6 +9,7 @@ const ApplicationQueryKeys = {
 export function useFilteredRicksAndMorties(filter: FilterInterface) {
     return useQuery({
         queryKey: ApplicationQueryKeys.filteredCharacters(filter), 
+        // queryKey: ['somequery', filter], 
         queryFn: RicksAndMortiesService.getRicksAndMorties,
         staleTime: 5000,
   })}

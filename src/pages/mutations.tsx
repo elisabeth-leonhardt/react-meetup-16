@@ -93,13 +93,13 @@ function Mutation() {
   const queryClient = useQueryClient();
   const createTodoMutation = useMutation({
     mutationFn: createTodo,
-    onSettled: () => queryClient.invalidateQueries({ queryKey: ["todos"] }),
-    // onSuccess: (newTodo) => {
-    //   queryClient.setQueryData(["todos"], (oldData: CompleteTodoI[]) => [
-    //     ...oldData,
-    //     newTodo,
-    //   ]);
-    // },
+    // onSettled: () => queryClient.invalidateQueries({ queryKey: ["todos"] }),
+    onSuccess: (newTodo) => {
+      queryClient.setQueryData(["todos"], (oldData: CompleteTodoI[]) => [
+        ...oldData,
+        newTodo,
+      ]);
+    },
   });
   const [todo, setTodo] = useState<UserCreatedTodoI>({ user: "", task: "" });
   function changeTodo(e: React.ChangeEvent<HTMLInputElement>) {

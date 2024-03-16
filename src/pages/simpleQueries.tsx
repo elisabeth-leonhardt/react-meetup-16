@@ -34,6 +34,8 @@ function Simplequeries() {
         }
       }
     },
+    staleTime: 5000,
+    retry: 5,
   });
 
   const loadForever = useQuery({

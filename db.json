@@ -19,63 +19,21 @@
       "done": true
     },
     {
-      "id": "yLlnRCm9NbU73LHhIdStS",
-      "user": "morty",
-      "task": "not do any homework",
-      "done": false
-    },
-    {
-      "id": "47N0SFI1PduZFfxnT4bwI",
+      "id": "ko3GzmTcqMYBEyH9jDKP_",
       "user": "summer",
-      "task": "watch intergalactic tv",
+      "task": "wanting to go on an adventure",
       "done": false
     },
     {
-      "id": "N7HMrtflX0Q9fdHv-606G",
+      "id": "PZx9Xr61tbIHW3cZVL1z2",
       "user": "summer",
-      "task": "pass the butter",
-      "done": true
+      "task": "watch some intergalactical tv",
+      "done": false
     },
     {
-      "id": "Stp-YpXWFHwz33qZJW-KL",
-      "user": "beth",
-      "task": "save a horses life",
-      "done": true
-    },
-    {
-      "id": "NDp2qnyNl2e2FKx_UHcv1",
+      "id": "uBW1jG1_lYKQevRyCYmMP",
       "user": "rick",
-      "task": "pick morty up at school",
-      "done": true
-    },
-    {
-      "id": "c25C92HSX2EbeLwwruEDa",
-      "user": "beth",
-      "task": "feel like a failure because she isn't a doctor",
-      "done": false
-    },
-    {
-      "id": "eCkBHr2SDjwN7C0QEuZfu",
-      "user": "jerry",
-      "task": "give a great presentation at work",
-      "done": false
-    },
-    {
-      "id": "FtR_KO4cCZD77GwqoYmjV",
-      "user": "beth",
-      "task": "fight with her father",
-      "done": false
-    },
-    {
-      "id": "hgVwTmGkZiyq9xhMgC1ir",
-      "user": "jerry",
-      "task": "insist that Pluto is a Planet",
-      "done": false
-    },
-    {
-      "id": "LGJpLFwWb45A9NhWXsV0n",
-      "user": "rick",
-      "task": "make a great science experiment",
+      "task": "do an dangerous experiment",
       "done": false
     }
   ]
