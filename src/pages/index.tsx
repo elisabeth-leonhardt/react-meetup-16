@@ -5,6 +5,11 @@ import { Chevron } from "@/components/Icons";
 
 const pages = [
   {
+    linktext: "Go to the exercises home",
+    link: "/exercises",
+    id: 6,
+  },
+  {
     linktext: "Simple Queries",
     link: "/simpleQueries",
     id: 0,
