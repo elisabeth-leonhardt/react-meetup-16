@@ -12,6 +12,36 @@ const pages = [
     link: "/exercises/warmup-solution",
     id: 1,
   },
+  {
+    linktext: "Query Filters and Pagination Exercise",
+    link: "/exercises/queryfilters-exercise",
+    id: 2,
+  },
+  {
+    linktext: "Query Filters and Pagination Solution",
+    link: "/exercises/queryfilters-solution",
+    id: 3,
+  },
+  {
+    linktext: "SSR Exercise",
+    link: "/exercises/ssr-exercise",
+    id: 4,
+  },
+  {
+    linktext: "SSR Solution",
+    link: "/exercises/ssr-solution",
+    id: 5,
+  },
+  {
+    linktext: "Infinite Scroll Exercise",
+    link: "/exercises/infinite-scroll-exercise",
+    id: 6,
+  },
+  {
+    linktext: "Infinite Scroll Solution",
+    link: "/exercises/infinite-scroll-solution",
+    id: 7,
+  },
   // {
   //   linktext: "Filters with API query parameters",
   //   link: "/filters",
@@ -37,6 +67,9 @@ const pages = [
   //   link: "/mutations",
   //   id: 5,
   // },
+  // infinite scroll  const [queryClient] = useState (
+  // server side rendering
+  // add a delete button to the existing todo application (you can update the cache, refetch or make an optimistic update)
 ];
 
 export default function Home() {

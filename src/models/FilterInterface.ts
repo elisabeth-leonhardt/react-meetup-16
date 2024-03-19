@@ -4,6 +4,7 @@ export interface FilterInterface {
     gender?: string;
     species?: string;
     type?: string;
+    page?: string;
   }
 
   export type FilterQueryKey = [string, FilterInterface]
