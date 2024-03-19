@@ -37,6 +37,5 @@ export default SSRExercise;
 
 export const getServerSideProps = async () => {
   // prefetch the data here, on the server side
-
   return { props: {} };
 };

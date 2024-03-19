@@ -3,6 +3,7 @@ import { ExerciseTitle } from "@/components/ExerciseTitle";
 import { PageWrapper } from "@/components/PageWrapper";
 import { RickAndMortyCharacterResponse } from "@/models/APITypes";
 import {
+  DehydratedState,
   HydrationBoundary,
   QueryClient,
   dehydrate,
@@ -17,7 +18,7 @@ async function getServerSideMorties() {
   return response;
 }
 
-function SSRSolution({ dehydratedState }) {
+function SSRSolution({ dehydratedState }: {dehydratedState: DehydratedState}) {
   const { data } = useQuery({
     queryKey: ["server-side-morties"],
     queryFn: getServerSideMorties,

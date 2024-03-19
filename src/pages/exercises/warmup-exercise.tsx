@@ -17,8 +17,8 @@ function WarmupExercise() {
     <PageWrapper>
       <ExerciseTitle title="Warmup-Exercise"></ExerciseTitle>
       {/* bonus: display some loading and error state */}
-      {/* you can use this as a loader: */}
-      {/* <span className="loader"></span> */}
+      {/* you can use this as a loader
+       <span className="loader"></span> */}
       <div className="grid grid-columns-cards gap-4 pt-4">
         {/* display the result of the query*/}
       </div>

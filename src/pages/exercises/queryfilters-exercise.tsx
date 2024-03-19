@@ -2,37 +2,42 @@ import Character from "@/components/Character";
 import { ExerciseTitle } from "@/components/ExerciseTitle";
 import { PageWrapper } from "@/components/PageWrapper";
 import { useFilterStore } from "@/lib/filterStore";
+import { RickAndMortyCharacterResponse } from "@/models/APITypes";
 import { FilterQueryKey } from "@/models/FilterInterface";
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import ReactPaginate from "react-paginate";
 
-// fix the types
-// define the exercise steps
-
-function getFilteredRicksAndMorties({
+type PaginationEvent = { selectedItem: { selected: number } };
+async function getFilteredRicksAndMorties({
   queryKey,
 }: {
   queryKey: FilterQueryKey;
 }) {
   const [, filter] = queryKey;
-  return fetch(
+  const response: Promise<RickAndMortyCharacterResponse> = await fetch(
     `https://rickandmortyapi.com/api/character?name=${filter.name}&status=${filter.status}&gender=${filter.gender}&species=${filter.species}&type=${filter.type}&page=${filter.page}`
   ).then((res) => res.json());
+  return response;
 }
 
 function QueryFiltersExercise() {
   const { filter, updateFilter } = useFilterStore();
 
-  function handlePageClick(e) {
-    updateFilter("page", e.selected + 1);
+  function handlePageClick(e: PaginationEvent["selectedItem"]) {
+    updateFilter("page", (e.selected + 1).toString());
   }
 
-  function onFilterChange(e) {
+  function onFilterChange(
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) {
     console.log(e.target.name, e.target.value);
     updateFilter(e.target.name, e.target.value);
   }
 
+  // change the useQuery hook so it takes into account the filters on the page
+  // filtering and pagination are already working properly! No need to change anything there
+  // hint: check the typescript error in the queryKey prop...
   const { data } = useQuery({
     queryKey: ["filteredCharacters"],
     queryFn: getFilteredRicksAndMorties,
@@ -41,6 +46,7 @@ function QueryFiltersExercise() {
     <PageWrapper>
       <ExerciseTitle title="Query Filters and Pagination Exercise"></ExerciseTitle>
       QueryFiltersExercise
+      {/* Summary component */}
       <div className="font-bold text-xl p-4 bg-white bg-opacity-20 rounded-lg text-white">
         <p>Total amount of filtered Characters: {data?.info?.count}</p>
       </div>
@@ -107,19 +113,20 @@ function QueryFiltersExercise() {
           />
         </div>
       </div>
-      {/* Componente que muestre las tarjetas */}
+      {/* Character Grid */}
       <div className="grid grid-columns-cards gap-4 pt-4">
         {data?.results?.map((character) => (
           <Character key={character.id} character={character}></Character>
         ))}
       </div>
+      {/* Pagination */}
       <ReactPaginate
         breakLabel="..."
         nextLabel="next >"
         onPageChange={handlePageClick}
         pageRangeDisplayed={5}
         forcePage={Number(filter?.page)}
-        pageCount={data?.info?.pages}
+        pageCount={data?.info?.pages ?? 0}
         previousLabel="< previous"
         renderOnZeroPageCount={null}
         containerClassName="flex gap-4 mt-4 justify-center"

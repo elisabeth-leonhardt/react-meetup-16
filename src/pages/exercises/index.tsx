@@ -42,31 +42,16 @@ const pages = [
     link: "/exercises/infinite-scroll-solution",
     id: 7,
   },
-  // {
-  //   linktext: "Filters with API query parameters",
-  //   link: "/filters",
-  //   id: 1,
-  // },
-  // {
-  //   linktext: "TanStack Query with custom hooks",
-  //   link: "/customHook",
-  //   id: 2,
-  // },
-  // {
-  //   linktext: "Dependent Queries",
-  //   link: "/dependentQueries",
-  //   id: 3,
-  // },
-  // {
-  //   linktext: "Debounced Query",
-  //   link: "/debounce",
-  //   id: 4,
-  // },
-  // {
-  //   linktext: "Mutations with and without refetch",
-  //   link: "/mutations",
-  //   id: 5,
-  // },
+  {
+    linktext: "Mutation Exercise",
+    link: "/exercises/mutation-exercise",
+    id: 8,
+  },
+  {
+    linktext: "Mutation Solution",
+    link: "/exercises/mutation-solution",
+    id: 9,
+  },
   // infinite scroll  const [queryClient] = useState (
   // server side rendering
   // add a delete button to the existing todo application (you can update the cache, refetch or make an optimistic update)

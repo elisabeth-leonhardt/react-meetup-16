@@ -26,7 +26,6 @@ function InfiniteScrollSolution() {
     getPreviousPageParam: (lastPage) => lastPage.info.prev,
   });
 
-  console.log(data?.pages);
   return (
     <PageWrapper>
       <ExerciseTitle title="Infinite Scroll Solution"></ExerciseTitle>

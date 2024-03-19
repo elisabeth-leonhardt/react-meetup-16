@@ -15,22 +15,23 @@ async function getInfiniteMorties(pageParam: number) {
 
 function InfiniteScrollExercise() {
   // complete the useInfiniteQuery hook here
-  const { data, status, fetchNextPage, hasNextPage } = useInfiniteQuery({
-    queryKey: ["infiniteRicks"],
-  });
+  // const { data, status, fetchNextPage, hasNextPage } = useInfiniteQuery({
+  //   queryKey: ["infiniteRicks"],
+  // });
   return (
     <PageWrapper>
       <ExerciseTitle title="Infinite Scroll Exercise"></ExerciseTitle>
       {status === "success" && (
-        // plug in all the neccessary data into the Infinite scroll component so it automatically fetches more mortiesa
+        // plug in all the neccessary data into the Infinite scroll component so it automatically fetches more morties
         <InfiniteScroll
-          dataLength={}
-          next={}
-          hasMore={}
+          dataLength={1}
+          next={1}
+          hasMore={false}
           loader={<h4>Loading...</h4>}
         >
           <div className="grid grid-columns-cards gap-4 pt-4">
-            {data?.pages?.map((singlePage) => (
+            {/* uncomment this loop so you can show the cards once the useInfiniteQuery hook is working */}
+            {/* {data?.pages?.map((singlePage) => (
               <>
                 {singlePage.results.map((character) => (
                   <Character
@@ -39,7 +40,7 @@ function InfiniteScrollExercise() {
                   ></Character>
                 ))}
               </>
-            ))}
+            ))} */}
           </div>
         </InfiniteScroll>
       )}
